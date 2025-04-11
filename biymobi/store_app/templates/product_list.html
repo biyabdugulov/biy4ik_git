@@ -1,0 +1,10 @@
+<ul>
+    {% for product in products %}
+    <li>
+        <p><a href="{% url 'product_detail' product.pk %}">название: {{ product.product_name }}</a></p>
+        <p>категория: {{ product.category }}</p>
+        <p>Цена: {{ product.prise }}</p>
+        <p>Создано: {{ product.create_date }}</p>
+    </li>
+    {% endfor %}
+</ul>
